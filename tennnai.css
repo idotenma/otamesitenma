@@ -1,0 +1,254 @@
+body{
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  background: white;
+  margin: 0;
+}
+header{
+  background-image: url("../jellyfish-698521_1280.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  font-weight: 1300;
+  color: rgb(85, 3, 3);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+header .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px;
+}
+header .info p{
+  margin: 0;
+  font-size: 18px;
+  align-self: flex-start;
+}
+header .info h1{
+  flex: 1;
+  margin: 0;
+  font-size: 60px;
+  border-top: 3px rgb(65, 65, 107) solid;
+}
+header ul{
+  margin-right: 5%;
+  list-style-type: none;
+  padding: 0;
+  align-self: center;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bolder;
+}
+header ul li {
+  display: inline-block;
+  color: rgb(85, 3, 3);
+}
+header ul a:hover{
+  opacity: .5;
+}
+body > .container{
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+}
+nav{
+  width: 150px;
+  flex: 1;
+  padding-left: 20px;
+}
+nav .container ul{
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+nav a{
+  text-decoration: none;
+  color: rgb(134, 26, 26);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+nav a:hover{
+  opacity: .6;
+  cursor: pointer;
+}
+
+main{
+  flex: 4;
+  padding-right: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main h1{
+  font-family: 'Times New Roman', Times, serif;
+}
+main > img{
+  width: 90%;
+  height: auto;
+  margin: 40px 0;
+}
+
+aside{
+  margin-top: 50px;
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside a{
+  display: flex;
+  text-decoration: none;
+  width: 80%;
+  margin-bottom: 30px;
+  border-radius: 10%;
+}
+aside a:hover{
+  opacity: .6;
+}
+aside ul{
+  padding: 5px;
+}
+aside li{
+  list-style: none;
+  font-family: cursive;
+  color: rgb(139, 47, 40);
+  font-weight: bolder;
+}
+aside a:nth-child(1){
+  background: rgb(133, 46, 46);
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside a:nth-child(1) li{
+  color: aliceblue;
+  line-height: 2em;
+}
+aside a:nth-child(2){
+  background: rgb(66, 133, 46);
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside a:nth-child(2) li{
+  color: aliceblue;
+  line-height: 2em;
+}
+aside a:nth-child(3){
+  background: rgb(192, 206, 0);
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside a:nth-child(3) li{
+  color: rgb(97, 97, 97);
+  line-height: 2em;
+}
+aside a:nth-child(4){
+  background: rgb(0, 4, 255);
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside a:nth-child(4) li{
+  color: aliceblue;
+  line-height: 2em;
+}
+footer{
+  padding: 40px 40px 40px 0;
+  color: gray;
+  display: flex;
+  justify-content: center;
+
+}
+footer ul{
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
+.open,
+.back{
+  display: none;
+}
+input[type='checkbox'] {
+  position: absolute;
+  left: -1000px;
+}
+
+@media(max-width: 1100px){
+  body > .container{
+    flex-direction: column;
+    padding: 0;
+  }
+  header{
+    height: auto;
+  }
+  header .container{
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  header .info{
+    margin: 0;
+  }
+  header .container ul{
+    font-size: 12px;
+  }
+  .open{
+    display: block;
+    background: white;
+  }
+  .open img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+  nav{
+    position: absolute;
+    left: -250px;
+    transition: all .2s;
+    height: 400%;
+    background: aliceblue;
+    margin: 0;
+  }
+  input[type='checkbox']:checked ~ * nav{
+    left: 0;
+  }
+  input[type='checkbox']:checked ~ * .near{
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background: rgba(0, 0, 0, .8);
+  }
+  aside a:nth-child(1),
+  aside a:nth-child(2),
+  aside a:nth-child(3),
+  aside a:nth-child(4){
+    width: 300px;
+    height: 200px;
+  }
+}
